@@ -1,1 +1,14 @@
 # smartchat
+This is just my study case with Socket.io + NodeJS.
+
+To run this, please register parse account with parse.com and get configuration key.
+
+For index.js, please get your ParseAppKey, ParseJavascriptKey, and APIKey, to replace as below:
+
+
+var ParseAppKey = 'YOUR_APP_KEY'; //line 17
+var ParseAPIKey = 'YOUR_API_KEI'; //line 18
+Parse.initialize('YOUR_APP_KEY_HERE', 'YOUR_JAVASCRIPT_KEY'); //line 19
+
+
+For CloudCode/config/global.json, you also have to configure your parse key in that file too.
