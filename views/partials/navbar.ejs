@@ -1,0 +1,30 @@
+<ul class="dropdown-content" id="dropdown">
+  <li>
+    <a href="#">Settings</a>
+  </li>
+  <li class="divider"></li>
+  <li>
+    <a href="/logout">Logout</a>
+  </li>
+</ul>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo left" href="#" style="margin-left:20px">Smart Chat</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#">
+            <img id="profileImage" class="profile circle" height="44px" src="<%= user.profile.url %>" width="44px"/>
+            <span class="displayName"><%= user.displayName %></span>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-button" data-activates="dropdown" href="mobile.html">
+            <i class="material-icons">more_vert</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</div>

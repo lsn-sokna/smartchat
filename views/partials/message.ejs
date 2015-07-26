@@ -1,0 +1,25 @@
+<%# <h3 class="chat-title fixed">Global Chat</h3>%>
+<div id="chat-box">
+  <ul class="collection" id="chat-messages">
+    <center id="spinner-chat" style="margin-top:10px;">
+      <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </center>
+  </ul>
+</div>
+<div class="input-field" id="chat-input" style="width:100%;">
+    <input class="validate" id="message" placeholder="Chat message here..." style="float:left;width:63%" type="text">
+    <a class="waves-effect waves-light btn" id="send-btn" onclick="send();$('#message').val('')" style="float:right;margin-bottom:10px;margin-left:54%">
+      <i class="material-icons left"></i>Send</a>
+</div>

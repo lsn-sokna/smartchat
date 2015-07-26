@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Smart Chat</title>
+  <style>
+    body,
+    #submit-btn {
+      background: linear-gradient(128deg, #1ab5c2, #0572e0);
+      background-attachment: fixed;
+    }
+
+    #other-btn {
+      color: #0572e0;
+    }
+
+    #login,
+    #signup {
+      width: 30%;
+      min-width: 300px;
+      max-width: 400px;
+    }
+  </style>
+
+  <% include ../partials/header %>
+  <script src="/src/js/user.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+  <div id="login" class="container">
+    <div class="row">
+      <div class="card">
+        <div class="card-content">
+          <h1 class="card-title black-text" style="text-align:center;">Login to SmartChat</h1>
+          <form action="login" method="post">
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="email" id="email" type="email" class="validate" required="required">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="password" id="password" type="password" class="validate" required="required">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <input type="checkbox" id="remember" />
+              <label for="remeber">Remember Me</label>
+            </div>
+            <div class="card-action">
+              <div class="row">
+                <center>
+                  <a id="submit-btn" class="btn waves-effect waves-light white-text" >Login
+                  </a>
+                </center>
+              </div>
+              <center id="spinner">
+                <div class="preloader-wrapper active">
+                  <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <center>
+        <a id="other-btn" class="btn waves-effect waves-light white" onclick="$('#login').hide();$('#signup').show();">I don't have account.</a>
+      </center>
+    </div>
+  </div>
+  <div id="signup" class="container" style="display:none;">
+    <div class="row">
+      <div class="card">
+        <div class="card-content">
+          <h1 class="card-title black-text" style="text-align:center;">Login to SmartChat</h1>
+          <form action="signup" method="post" enctype="multipart/form-data">
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="fullname" id="name" type="text" class="validate" required="required">
+                <label for="name">Full Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="email" id="email" type="email" class="validate" required="required">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="password" id="password" type="password" class="validate" required="required">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="confirm" id="password" type="password" class="validate" required="required">
+                <label for="confirm">Confirm Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="file-field input-field">
+                <input placeholder="Choose profile image" class="file-path validate" type="text" />
+                <div class="btn">
+                  <span>File</span>
+                  <input name="profile" type="file" />
+                </div>
+              </div>
+            </div>
+            <div class="card-action">
+              <div class="row">
+                <center>
+                  <button id="submit-btn" class="btn waves-effect waves-light" type="submit">Signup
+                  </button>
+                </center>
+              </div>
+            </div>
+            <div class="row">
+              <center id="spinner">
+                <div class="preloader-wrapper active">
+                  <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                      <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
+              </center>
+
+            </div>
+            <!-- </div> -->
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <center>
+        <a id="other-btn" class="btn waves-effect waves-light white" onclick="$('#login').show();$('#signup').hide();">I already have an account.</a>
+      </center>
+    </div>
+  </div>
+
+</body>
+
+</html>

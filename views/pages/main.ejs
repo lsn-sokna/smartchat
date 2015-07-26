@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Smart Chat</title>
+  <% include ../partials/header %>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    <script src="/src/js/smartchat.js" charset="utf-8"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      nav {
+        background: linear-gradient(128deg, #1ab5c2, #0572e0);
+        background-attachment: fixed;
+        display: fixed;
+      }
+
+      .profile {
+        float: left;
+        margin-top: 10px;
+      }
+
+      .displayName {
+        margin-left: 10px;
+        float: right;
+      }
+
+      #sidebar {
+        height: 100%;
+        overflow: hidden;
+        width: 260px;
+        margin-top: 64px;
+      }
+
+      #sidebar ul {
+        height: 100%;
+        overflow-y: scroll;
+      }
+
+      .non-hoverable:hover {
+        background: white;
+      }
+
+      main {
+        padding-left: 260px;
+        overflow-y: scroll;
+        height: 100%;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0px;
+        padding-left: 265px;
+        width: 100%;
+      }
+
+      .btn-group.dropup {
+        position: fixed;
+        left: 0px;
+        bottom: 0;
+      }
+
+      .full-width {
+        width: 100%;
+      }
+
+      .full-height {
+        height: 100%
+      }
+
+      .zero-magnet {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #chat-box {
+        width: 100%;
+        height: 100%;
+      }
+
+      #chat-box ul {
+        height: 80%;
+        overflow-y: scroll;
+      }
+
+      .chat-title {
+        display: block;
+        top: 0px;
+      }
+
+      #chat-input {
+        display: block;
+        bottom: 0px;
+        position: fixed;
+        width: 63%;
+      }
+
+      #send-btn {
+        display: block;
+        position: fixed;
+      }
+
+      .online-badge {
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        background: green;
+        float:right;
+        margin-top:27px;
+      }
+    </style>
+</head>
+
+<body>
+  <% include ../partials/navbar %>
+    <% include ../partials/sidebar %>
+      <main>
+        <% include ../pages/chat %>
+      </main>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "SmartChat": {
+      "applicationId": "IXjspCkzavVQx6OX0IJlHM2eMXsvihAj4BN8woy0",
+      "masterKey": "brtZeifHMR4Q83dqcu4Jsc6hfDJarxhMM8NPTXvy"
+    },
+    "_default": {
+      "link": "SmartChat"
+    }
+  }
+}
