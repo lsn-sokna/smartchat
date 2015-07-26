@@ -14,9 +14,9 @@
 
   var users = [];
   //app configuration
-  var ParseAppKey = 'IXjspCkzavVQx6OX0IJlHM2eMXsvihAj4BN8woy0';
-  var ParseAPIKey = 'ZlyZIUM8skbIybUCRx5KMV6508hiGJTnKzHFQIm0';
-  Parse.initialize('IXjspCkzavVQx6OX0IJlHM2eMXsvihAj4BN8woy0', 'VR5TLwzx9ZbSBnMfqe0aQoRp6meIgpe4pZBogtWL');
+  var ParseAppKey = 'YOUR_APP_KEY';
+  var ParseAPIKey = 'YOUR_API_KEI';
+  Parse.initialize('YOUR_APP_KEY_HERE', 'YOUR_JAVASCRIPT_KEY');
   app.set('port', (process.env.PORT || 5000));
   app.set('view engine', 'ejs');
   app.use(cookieParser('secret'));
