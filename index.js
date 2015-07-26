@@ -55,21 +55,6 @@
     return rand() + rand();
   };
 
-  function getCurrentUser(sessionToken, response) {
-    var options = {
-      uri: 'https://api.parse.com/1/users/me',
-      method: 'GET',
-      headers: {
-        "X-Parse-Application-Id": ParseAppKey,
-        "X-Parse-REST-API-Key": ParseAPIKey,
-        "X-Parse-Session-Token": sessionToken
-      }
-    };
-    request(options, function(error, body, res) {
-      response(JSON.parse(res));
-    });
-  };
-
   io.on('connection', function(socket) {
     console.log('connected to socket');
     socket.on('join', function(data) {
