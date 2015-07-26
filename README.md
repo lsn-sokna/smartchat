@@ -12,3 +12,10 @@ Parse.initialize('YOUR_APP_KEY_HERE', 'YOUR_JAVASCRIPT_KEY'); //line 19
 
 
 For CloudCode/config/global.json, you also have to configure your parse key in that file too.
+
+
+Note:
+  For Hosting server, I used Heroku to host this sample code. Here's an instruction that you can follow, and it's free.
+  https://devcenter.heroku.com/articles/getting-started-with-nodejs
+  For database, I used Parse to store all information of users and messages. It's also free, fast, easy-to-use, flexible.
+  https://parse.com/
